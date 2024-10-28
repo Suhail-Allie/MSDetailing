@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dales Buffing & Polishing | Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styling for gallery and modal */
+
+        /* CSS for the back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .back-to-top:hover {
+            background-color: #555;
+        }
+
+        /* Gallery layout */
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .modal-content img {
+            width: 100%;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            user-select: none;
+            transition: 0.3s;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .close:hover, .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .photo-gallery img {
+                max-width: 150px;
+                height: auto;
+            }
+
+            .back-to-top {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+
+            .modal-content {
+                width: 90%;
+            }
+
+            .prev, .next {
+                font-size: 16px;
+                padding: 10px;
+            }
+
+            .close {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .photo-gallery img {
+                max-width: 100px;
+                height: auto;
+            }
+
+            .back-to-top {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+
+            .modal-content {
+                width: 95%;
+            }
+
+            .prev, .next {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .close {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <h1>MS DETAILING AND CARWASH</h1>
+            <ul>
+                <li><a href="index.html"><b>HOME</b></a></li>
+                <li><a href="services.html"><b>SERVICES</b></a></li>
+                <li><a href="Story.html"><b>STORY</b></a></li>
+                <li><a href="Gallery.html"><b>GALLERY</b></a></li>
+                <li><a href="blog.html"><b>FAQ's</b></a></li>
+                <li><a href="ContactPage.html"><b>CONTACT</b></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1> ~ GALLERY ~ </h1>
+        <p><b>SEE THE AMAZING TRANSFORMATIONS WE'VE MADE!</b></p>
+
+        <section class="photo-gallery">
+            <img src="Images/b.png" alt="Before Vehicle Detailing">
+            <img src="Images/x.png" alt="Headlight Restoration">
+            <img src="Images/i.png" alt="Interior Detailing">
+            <img src="Images/p.png" alt="Paint Protection">
+           
+            <img src="Images/IMG31.jpg" alt="Before Vehicle Detailing">
+            <img src="Images/IMG32.jpg" alt="Headlight Restoration">
+            <img src="Images/IMG33.jpg" alt="Interior Detailing">
+            <img src="Images/IMG41.jpg" alt="Paint Protection">
+
+            <img src="Images/IMG1.jpg" alt="Before Vehicle Detailing">
+            <img src="Images/IMG34.jpg" alt="Headlight Restoration">
+            <img src="Images/IMG39.jpg" alt="Interior Detailing">
+            <img src="Images/IMG40.jpg" alt="Paint Protection">
+
+            <img src="Images/IMG21.jpg" alt="Before Vehicle Detailing">
+            <img src="Images/IMG22.jpg" alt="Headlight Restoration">
+            <img src="Images/IMG23.jpg" alt="Interior Detailing">
+            <img src="Images/IMG24.jpg" alt="Paint Protection">
+
+            <img src="Images/IMG25.jpg" alt="Before Vehicle Detailing">
+            <img src="Images/IMG26.jpg" alt="Headlight Restoration">
+            <img src="Images/IMG27.jpg" alt="Interior Detailing">
+            <img src="Images/IMG28.jpg" alt="Paint Protection">
+
+            <img src="Images/IMG29.jpg" alt="Before Vehicle Detailing">
+            <img src="Images/IMG30.jpg" alt="Headlight Restoration">
+            <img src="Images/IMG10.jpg" alt="Interior Detailing">
+            <img src="Images/IMG14.jpg" alt="Paint Protection">
+
+            <img src="Images/IMG9.jpg" alt="Before Vehicle Detailing">
+            <img src="Images/IMG11.jpg" alt="Headlight Restoration">
+            <img src="Images/IMG12.jpg" alt="Interior Detailing">
+            <img src="Images/IMG35.jpg" alt="Paint Protection">
+
+            
+            <img src="Images/IMG13.jpg" alt="Before Vehicle Detailing">
+            <img src="Images/IMG15.jpg" alt="Headlight Restoration">
+            <img src="Images/IMG36.jpg" alt="Interior Detailing">
+            <img src="Images/IMG16.jpg" alt="Paint Protection">
+
+            <img src="Images/IMG17.jpg" alt="Before Vehicle Detailing">
+            <img src="Images/IMG18.jpg" alt="Headlight Restoration">
+            <img src="Images/IMG19.jpg" alt="Interior Detailing">
+            <img src="Images/IMG20.jpg" alt="Paint Protection">
+
+            <img src="Images/IMG37.jpg" alt="Before Vehicle Detailing">
+            <img src="Images/IMG38.jpg" alt="Headlight Restoration">
+            <img src="Images/IMG7.jpg" alt="Interior Detailing">
+            <img src="Images/IMG8.jpg" alt="Paint Protection">
+
+            <img src="Images/IMG42.jpg" alt="Interior Detailing">
+            <img src="Images/IMG43.jpg" alt="Paint Protection">
+
+
+            <img src="Images/IMG65.jpg" alt="Before Vehicle Detailing">
+            <img src="Images/IMG66.jpg" alt="Headlight Restoration">
+            <img src="Images/IMG67.jpg" alt="Interior Detailing">
+            <img src="Images/IMG74.jpg" alt="Paint Protection">
+
+            <img src="Images/IMG75.jpg" alt="Before Vehicle Detailing">
+            <img src="Images/IMG76.jpg" alt="Headlight Restoration">
+            <img src="Images/IMG68.jpg" alt="Interior Detailing">
+            <img src="Images/IMG69.jpg" alt="Paint Protection">
+
+            <img src="Images/IMG77.jpg" alt="Before Vehicle Detailing">
+            <img src="Images/IMG70.jpg" alt="Headlight Restoration">
+            <img src="Images/IMG71.jpg" alt="Interior Detailing">
+            <img src="Images/IMG82.jpg" alt="Paint Protection">
+
+
+            <img src="Images/IMG78.jpg" alt="Before Vehicle Detailing">
+            <img src="Images/IMG79.jpg" alt="Headlight Restoration">
+            <img src="Images/IMG72.jpg" alt="Interior Detailing">
+            <img src="Images/IMG83.jpg" alt="Paint Protection">
+            <img src="Images/IMG80.jpg" alt="Interior Detailing">
+            <img src="Images/IMG81.jpg" alt="Paint Protection">
+
+        </section>
+
+        <!-- Modal for image viewing -->
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <div class="modal-content">
+                <img id="modalImage" src="">
+            </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+        </div>
+
+        <div class="call-to-action">
+            <h2>Book your appointment today!</h2>
+            <p>Call us at <a href="tel:+27611272342">(061) 127 2342</a> or email us at 
+                <a href="mailto:msdetailingcarwash1@gmail.com">msdetailingcarwash1@gmail.com</a></p>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script>
+        // JavaScript for modal and navigation
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+        var closeBtn = document.getElementsByClassName("close")[0];
+        var images = document.querySelectorAll(".photo-gallery img");
+        var currentIndex;
+
+        // Open the modal when image is clicked
+        images.forEach((img, index) => {
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                currentIndex = index;
+            }
+        });
+
+        // Close the modal
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Show the previous image
+        document.querySelector(".prev").onclick = function() {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            modalImg.src = images[currentIndex].src;
+        }
+
+        // Show the next image
+        document.querySelector(".next").onclick = function() {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            modalImg.src = images[currentIndex].src;
+        }
+
+        // Close the modal if user clicks outside the image
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+ <!-- Back to Top Button -->
+ <button class="back-to-top" onclick="scrollToTop()">↑ Top</button>
+
+ <script>
+     // Show the button when scrolling down
+     window.onscroll = function() {
+         const button = document.querySelector('.back-to-top');
+         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+             button.style.display = 'block';
+         } else {
+             button.style.display = 'none';
+         }
+     };
+
+     // Scroll to the top of the page smoothly
+     function scrollToTop() {
+         window.scrollTo({top: 0, behavior: 'smooth'});
+     }
+ </script>
+
+</body>
+</html>

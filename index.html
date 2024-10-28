@@ -1,0 +1,153 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS DETAILING AND CARWASH</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* CSS for the back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 80px;
+            padding: 20px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .back-to-top:hover {
+            background-color: #555;
+        }
+
+        /* Style for the hero content */
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Target the first image item only */
+        .hero-content .image-item:first-child img {
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Responsive 2x2 image grid */
+        .image-grid-2x2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .image-grid-2x2 .image-item img {
+            width: 900px;
+            height: 800px;
+            object-fit: cover;
+        }
+
+        /* Responsive styling for smaller screens */
+        @media (max-width: 768px) {
+            .image-grid-2x2 {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content .image-item:first-child img {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back-to-top {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>MS DETAILING AND CARWASH</h1>
+            <ul>
+                <li><a href="index.html"><b>HOME</b></a></li>
+                <li><a href="services.html"><b>SERVICES</b></a></li>
+                <li><a href="Story.html"><b>STORY</b></a></li>
+                <li><a href="Gallery.html"><b>GALLERY</b></a></li>
+                <li><a href="blog.html"><b>FAQ's</b></a></li>
+                <li><a href="ContactPage.html"><b>CONTACT</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="image-item">
+                <img src="Images/DETAILING LOGO.jpg" alt="Car detailing example 1">
+            </div>
+            <p></p>
+            <a href="services.html" class="cta-button">EXPLORE OUR PACKAGES!</a>
+        </div>
+    </section>
+<p></p>
+    <div class="image-grid-2x2">
+        <div class="image-item">
+            <img src="Images/IMG2.jpg" alt="Service 1">
+        </div>
+        <div class="image-item">
+            <img src="Images/IMG3.jpg" alt="Service 2">
+        </div>
+        <div class="image-item">
+            <img src="Images/IMG4.jpg" alt="Service 3">
+        </div>
+        <div class="image-item">
+            <img src="Images/IMG5.jpg" alt="Service 4">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MS DETAILING AND CARWASH. All rights reserved.</p>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">↑ Top</button>
+
+    <script>
+        // Show the button when scrolling down
+        window.onscroll = function() {
+            const button = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        };
+
+        // Scroll to the top of the page smoothly
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+
+</body>
+</html>

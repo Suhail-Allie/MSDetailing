@@ -1,0 +1,199 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - MS DETAILING AND CARWASH</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       /* CSS for the back to top button */
+       .back-to-top {
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+            background-color: #5a5a5a;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .back-to-top:hover {
+            background-color: #ff0000;
+        }
+
+        .services-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .service {
+            background-color: #ff0000;
+            padding: 10px;
+            margin: 0;
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            width: calc(50% - 10px); /* Adjust width as needed */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .wide-service {
+            width: 90%; /* Adjust width as needed */
+        }
+
+        .service h3, .service p {
+            margin: 5px 0;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #ff0000;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    .image-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .image-item img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Media Queries for Larger Screens */
+    @media (min-width: 768px) {
+        .image-item {
+            max-width: 75%;
+            margin: 0 auto 20px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .image-item {
+            max-width: 60%;
+            margin: 0 auto 20px;
+        }
+    }
+
+  /* Style for the red "View Package" button */
+  .red-button {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>MS DETAILING AND CARWASH</h1>
+            <ul>
+                <li><a href="index.html"><b>HOME</b></a></li>
+                <li><a href="services.html"><b>SERVICES</b></a></li>
+                <li><a href="Story.html"><b>STORY</b></a></li>
+                <li><a href="Gallery.html"><b>GALLERY</b></a></li>
+                <li><a href="blog.html"><b>FAQ's</b></a></li>
+                <li><a href="ContactPage.html"><b>CONTACT</b></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="services">
+        <h2>Our Services</h2>
+
+        <div class="services-container">
+            <div class="service">
+                <h3>Full All Round Vehicle Detailing</h3>
+                <p>The flyer advertises MS Detailing & Carwash, a mobile detailing service, offering a Summer Special promotion for a full detail from <b>R1500</b>, including deep cleaning, clay bar treatment, and decontamination.</p>
+                <a href="#image1"><button class="red-button">View Package</button></a>
+            </div>
+
+            <div class="service">
+                <h3>Paint Correction Package</h3>
+                <p>The flyer advertises MS Detailing & Carwash, a mobile detailing service, offering a Paint Correction Promo Package starting from <b>R1999</b>. It includes iron decontamination, claybar, and a 2-step correction process.</p>
+                <a href="#image2"><button class="red-button">View Package</button></a>
+            </div>
+
+            <div class="service">
+                <h3>The Ceramic Detail</h3>
+                <p>MS Detailing & Carwash advertises their Ceramic Detail Package, offering services like interior steam cleaning, deep cleaning, claybar treatment, engine bay detailing, and 1-year ceramic coating for <b>R2500</b>.</p>
+                <a href="#image3"><button class="red-button">View Package</button></a>
+            </div>
+
+            <div class="service">
+                <h3>The Full Valet Detail</h3>
+                <p>MS Detailing & Carwash offers a Spring Clean Full Valet Special starting at <b>R799</b>. This service includes deep cleaning, engine bay cleanup, and ceramic spray wax.</p>
+                <a href="#image4"><button class="red-button">View Package</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Grid with Headers -->
+    <h2> ~ FULL AND ALL ROUND VEHICLE DETAILING ~ </h2>
+    <p></p>
+    <div class="image-item" id="image1">
+        <img src="Images/IMG4.jpg" alt="Car detailing example 1">
+    </div>
+
+    <h2> ~ PAINT CORRECTION PACKAGE ~ </h2>
+    <p></p>
+    <div class="image-item" id="image2">
+        <img src="Images/IMG3.jpg" alt="Car detailing example 2">
+    </div>
+
+    <h2> ~ THE CERAMIC DETAIL ~ </h2>
+    <p></p>
+    <div class="image-item" id="image3">
+        <img src="Images/IMG2.jpg" alt="Car detailing example 3">
+    </div>
+
+    <h2> ~ THE FULL VALET DETAIL ~ </h2>
+    <p></p>
+    <div class="image-item" id="image4">
+        <img src="Images/IMG5.jpg" alt="Car detailing example 4">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MS DETAILING & CARWASH. All rights reserved.</p>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">↑ Top</button>
+
+    <script>
+        // Show the button when scrolling down
+        window.onscroll = function() {
+            const button = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        };
+
+        // Scroll to the top of the page smoothly
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+
+</body>
+</html>
